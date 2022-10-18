@@ -1,0 +1,24 @@
+note over browser:
+Button press to submit new note
+end note
+
+note over browser:
+browser appends new note to local notes object
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/notes/new_note_spa
+browser-->server: new note json
+
+note over server:
+server appends new note to notes object in database
+end note
+
+server-->browser: Reponse 302
+
+note over browser:
+browser ignores default behaviour to reload page
+end note
+
+note over browser:
+browser redraws notes element with new local notes object
+end note
