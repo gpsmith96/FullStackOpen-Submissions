@@ -3,7 +3,7 @@ const Part = (props) => {
   return (
     <>
       <p>
-        {props.name} {props.count}
+        {props.name} {props.exercises}
       </p>
     </>
   )
